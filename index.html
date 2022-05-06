@@ -11,10 +11,13 @@
         href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
         rel="stylesheet">
     <title>WebStudio</title>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
         integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./modal.js">
+    
 </head>
 
 <body>
@@ -66,11 +69,24 @@
                 <div class="section-1-content container">
                     
                         <h1 class="section-1-title">Эффективные решения <br><span class="section-1-title-span">для вашего бизнеса</span></h1>
-                        <button class="section-1-button " type="button">Заказать услугу</button>
+                        <button class="section-1-button  "data-modal-open type="button">Заказать услугу</button>
                     
                 </div>
+               
+                
             </section>
-           
+
+            <div class="backdrop is-hidden "data-modal>
+                <div class="modal">
+                    <div class="section-1-icon ">
+                       <button class="button-icon " data-modal-close type="button">
+                        <svg class="section-1-close-icons" width="11" height="11">
+                            <use href="./images/icons/5-symbol-defs.svg#icon-Vector"></use>
+                        </svg>
+                       </button>
+                    </div>
+                </div>
+            </div>
         <!-- section-2 -->
        
             <section class="section-2">
@@ -425,6 +441,7 @@
             </div>
         </div>
     </footer>
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
