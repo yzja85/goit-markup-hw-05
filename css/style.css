@@ -24,6 +24,8 @@ body {
   margin: 0;
   font-family: 'roboto',sans-serif;
 }
+
+
 .box{
   
   border-bottom: 1px solid #EEEEEE;
@@ -35,6 +37,9 @@ body {
   width: 170px;
   height: 92px;
   border: 1px solid #AFB1B8;
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .box-1:hover {
   border: 1px solid var(--accent-color);
@@ -53,8 +58,12 @@ body {
 .list {
   list-style: none;
 }
-.link {
+.link { 
   text-decoration: none;
+  transition-property: color, background-color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 .link.active {
   color: var(--accent-color);
@@ -88,8 +97,6 @@ body {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
-  font-family: 'roboto',sans-serif;
-
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -101,7 +108,6 @@ body {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
-  font-family: 'roboto',sans-serif;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -113,7 +119,6 @@ body {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
-  font-family: 'roboto',sans-serif;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -179,8 +184,8 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-
   color: var(--second-text-color);
+  
 }
 .mail-icon {
   fill: var(--second-text-color);
@@ -227,7 +232,8 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  
+  margin-right: auto;
+  margin-left: auto;
   padding-top: 200px;
   padding-bottom: 200px;
   }
@@ -258,6 +264,9 @@ body {
   color: var(--btn-color);
  display: block;
  margin: 0 auto;
+transition-property: background-color;
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .section-1-button:hover {
   background-color: #155c95;
@@ -292,11 +301,7 @@ background-color: #155c95;
   align-items: center;
 }
 
-.section-1-close-icons{
-  
 
-
-}
 .modal{
   position: absolute;
   top: 50%;
@@ -627,10 +632,12 @@ padding-bottom: 30px;
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  
+
   display: flex;
   align-items: center;
   justify-content: center;
+
+  
 }
 .employee-soc-icons{
   fill:#AFB1B8 ;
@@ -676,9 +683,14 @@ padding-bottom: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
+
 .client-icon{
   fill:#AFB1B8 ;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client-icon-link:hover .client-icon{
   fill: var(--accent-color); 
@@ -784,7 +796,12 @@ padding-bottom: 30px;
   height: 44px;
   border-radius: 50%;
   background-color:#3f3f41;
-}
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
 .footer-icon-item:hover{
   background-color: var(--accent-color);
 }
@@ -807,11 +824,13 @@ padding-bottom: 30px;
   margin-bottom: 50px;
   display: flex;
   justify-content: center;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .fierst-portfolio-item:not( :last-child) {
   margin-right: 8px;
 }
-.portfolio-button1 {
+.portfolio-button {
+  
   background-color: var(--btn-color-porfolio);
   border-radius: 4px;
   font-family: 'Roboto';
@@ -822,95 +841,27 @@ padding-bottom: 30px;
   color: var(--first-text-color);
   cursor: pointer;
   padding: 6px 22px;
+
+  transition-property: background-color;
+ transition-duration: 250ms;
+ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ;
+  
 }
-.portfolio-button2 {
-  background-color: var(--btn-color-porfolio);
-  border-radius: 4px;
-  font-family: 'Roboto';
-  font-style: normal;
-  font-size: 16px;
-  line-height: 1.62;
-  letter-spacing: 0.03em;
-  color: var(--first-text-color);
-  cursor: pointer;
-  padding: 6px 22px;
+
+.portfolio-button:hover {
+  background-color: var(--accent-color);
+  color: #ffffff;
+ 
 }
-.portfolio-button3 {
-  background-color: var(--btn-color-porfolio);
-  border-radius: 4px;
-  font-family: 'Roboto';
-  font-style: normal;
-  font-size: 16px;
-  line-height: 1.62;
-  letter-spacing: 0.03em;
-  color: var(--first-text-color);
-  cursor: pointer;
-  padding: 6px 22px;
-}
-.portfolio-button4 {
-  background-color: var(--btn-color-porfolio);
-  border-radius: 4px;
-  font-family: 'Roboto';
-  font-style: normal;
-  font-size: 16px;
-  line-height: 1.62;
-  letter-spacing: 0.03em;
-  color: var(--first-text-color);
-  cursor: pointer;
-  padding: 6px 22px;
-}
-.portfolio-button5 {
-  background-color: var(--btn-color-porfolio);
-  border-radius: 4px;
-  font-family: 'Roboto';
-  font-style: normal;
-  font-size: 16px;
-  line-height: 1.62;
-  letter-spacing: 0.03em;
-  color: var(--first-text-color);
-  cursor: pointer;
-  padding: 6px 22px;
-}
-.portfolio-button1:hover {
+.portfolio-button:focus {
   background-color: var(--accent-color);
   color: #ffffff;
 }
-.portfolio-button1:focus {
-  background-color: var(--accent-color);
-  color: #ffffff;
-}
-.portfolio-button2:hover {
-  background-color: var(--accent-color);
-  color: #ffffff;
-}
-.portfolio-button2:focus {
-  background-color: var(--accent-color);
-  color: #ffffff;
-}
-.portfolio-button3:hover {
-  background-color: var(--accent-color);
-  color: #ffffff;
-}
-.portfolio-button3:focus {
-  background-color: var(--accent-color);
-  color: #ffffff;
-}
-.portfolio-button4:hover {
-  background-color: var(--accent-color);
-  color: #ffffff;
-}
-.portfolio-button4:focus {
-  background-color: var(--accent-color);
-  color: #ffffff;
-}
-.portfolio-button5:hover {
-  background-color: var(--accent-color);
-  color: #ffffff;
-}
-.portfolio-button5:focus {
-  background-color: var(--accent-color);
-  color: #ffffff;
-}
+.effect-btn-shadow{
+  transition-property:box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
 .effect-btn-shadow:hover {
   box-shadow: 1px 2px 2px 0px rgba(13, 4, 4, 0.5);
   }
@@ -921,22 +872,23 @@ padding-bottom: 30px;
 .second-portfolio-list {
   display: flex;
   flex-wrap: wrap;
-  
-
-}
+  }
 .second-portfolio-item-1{
   margin-top: 0;
   margin-right: 30px;
-  
-  
-}
+  }
 .effect-shadow{
   display: block;
+  transition-property:box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.effect-shadow:hover, :focus{
+.effect-shadow:hover {
 box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16);
 }
-
+.effect-shadow:focus {
+  box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16);
+}
 .second-portfolio-item-2{
 margin-top: 0;
 margin-right: 30px;
